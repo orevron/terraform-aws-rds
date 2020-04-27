@@ -6,9 +6,6 @@ jobs:
     executor: bc-orb/default
     steps:
       - checkout
-      - bc-orb/greet:
-          greeting: "allahu akbar"
-      - bc-orb/install
       - bc-orb/checkov:
           path: '.'
 workflows:
