@@ -9,8 +9,8 @@ jobs:
     steps:
       - checkout
       - bc-orb/greet:
-        greeting: "allahu akbar"
-        
+          greeting: "allahu akbar"
+
 workflows:
     build-and-test:
       jobs:
