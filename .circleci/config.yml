@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - bc-orb/checkov:
-          path: '.'
           output: 'json'
 workflows:
   checkov:
