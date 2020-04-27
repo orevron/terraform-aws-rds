@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - bc-orb/scan:
-          output: "kisi"
           directory: "."
           suppress: true
 workflows:
