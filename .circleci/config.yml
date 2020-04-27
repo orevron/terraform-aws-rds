@@ -1,12 +1,12 @@
 version: 2.1
 orbs:
-  checkov-orb: bridgecrew/checkov-orb@0.0.3
+  checkov: bridgecrew/checkov-orb@0.0.3
 jobs:
   run-checkov:
-    executor: checkov-orb/default
+    executor: checkov/default
     steps:
       - checkout
-      - checkov-orb/scan:
+      - checkov/scan:
           directory: "."
           suppress: true
 workflows:
