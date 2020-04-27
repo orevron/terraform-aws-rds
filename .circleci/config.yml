@@ -1,13 +1,16 @@
 version: 2.1
 orbs:
-  bc-orb: evrons/bc-orb@0.0.3
+  bc-orb: evrons/bc-orb@1.0.0
 jobs:
   run-checkov:
     executor: bc-orb/default
     steps:
+      - checkout
       - bc-orb/greet:
           greeting: "allahu akbar"
-
+      - bc-orb/install
+      - bc-orb/checkov:
+          path: '.'
 workflows:
   checkov:
     jobs:
