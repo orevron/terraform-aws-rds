@@ -5,7 +5,7 @@ jobs:
   run-checkov:
     executor: bc-orb/default
     steps:
-      - greet:
+      - bc-orb/greet:
           greeting: "allahu akbar"
 
 workflows:
