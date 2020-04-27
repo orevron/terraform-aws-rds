@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - bc-orb/scan:
-          output: "json"
           directory: "."
           suppress: true
 workflows:
