@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  bc-orb: evrons/bc-orb@1.0.0
+  bc-orb: evrons/bc-orb@2.0.0
 jobs:
   run-checkov:
     executor: bc-orb/default
