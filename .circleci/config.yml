@@ -1,13 +1,15 @@
 version: 2.1
 orbs:
-  bc-orb: evrons/bc-orb@2.0.0
+  bc-orb: evrons/bc-orb@3.0.0
 jobs:
   run-checkov:
     executor: bc-orb/default
     steps:
       - checkout
       - bc-orb/checkov:
-          output: 'json'
+          output: "json"
+          directory: "."
+          suppress: true
 workflows:
   checkov:
     jobs:
