@@ -1,17 +1,14 @@
 version: 2.1
 orbs:
-  node: circleci/node@1.1.6
-  bc-orb: evrons/bc-orb@0.0.1
+  bc-orb: evrons/bc-orb@0.0.2
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
+  run-checkov:
+    executor: bc-orb/default
     steps:
-      - checkout
       - bc-orb/greet:
           greeting: "allahu akbar"
 
 workflows:
-    build-and-test:
+  run-checkov:
       jobs:
         - build-and-test
