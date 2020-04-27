@@ -9,6 +9,6 @@ jobs:
           greeting: "allahu akbar"
 
 workflows:
-  run-checkov:
+  checkov:
       jobs:
-        - build-and-test
+        - run-checkov
