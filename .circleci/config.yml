@@ -6,7 +6,7 @@ jobs:
     executor: bc-orb/default
     steps:
       - checkout
-      - bc-orb/checkov:
+      - bc-orb/scan:
           output: "json"
           directory: "."
           suppress: true
